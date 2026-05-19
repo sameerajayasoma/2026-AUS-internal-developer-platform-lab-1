@@ -1,0 +1,11 @@
+apiVersion: openchoreo.dev/v1alpha1
+
+metadata:
+  name: snip-backend
+
+endpoints:
+  - name: http_api
+    port: 8080
+    type: HTTP
+    visibility:
+      - project
