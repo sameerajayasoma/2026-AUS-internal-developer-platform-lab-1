@@ -18,3 +18,7 @@ dependencies:
       envBindings:
         address: API_SERVICE_URL
 
+configurations:
+  env:
+    - name: PORT
+      value: "3000"
