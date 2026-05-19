@@ -1,0 +1,24 @@
+apiVersion: openchoreo.dev/v1alpha1
+
+metadata:
+  name: frontend
+
+endpoints:
+  - name: webapp
+    port: 3000
+    type: HTTP
+    visibility:
+      - external
+
+dependencies:
+  endpoints:
+    - component: snip-api-service
+      name: api
+      visibility: project
+      envBindings:
+        address: API_SERVICE_URL
+
+configurations:
+  env:
+    - name: PORT
+      value: "3000"
